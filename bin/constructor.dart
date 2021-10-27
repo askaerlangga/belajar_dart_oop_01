@@ -4,9 +4,10 @@ class Person{
   final String negara = "Indonesia";
 
   //Constructor = Method yang dipanggil saat membuat object
-  Person(String paramNama, String paramAlamat){
-    nama = paramNama;
-    alamat = paramAlamat;
+  Person(String nama, String alamat){
+    //this = Mengakses object saat ini
+    this.nama = nama;
+    this.alamat = nama;
   }
 }
 

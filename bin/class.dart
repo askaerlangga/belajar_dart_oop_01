@@ -17,6 +17,13 @@ class Person{
   }
 }
 
+//extension Menambahkan field dan method tanpa perlu mengubah isi class
+extension SayGoodBye on Person{
+  void sayGoodBye(String paramName){
+    print("Selamat tinggal $paramName, dari $nama");
+  }
+}
+
 class Computer{
   //Method Expression Body = Method yang sederhana
   void startup() => print("Computer is starting");
@@ -37,6 +44,9 @@ void main(){
   person1.hello();
   person1.sayHello('Edo');
 
+  //Memanggil Method dari extension SayGoodBye
+  person1.sayGoodBye('Fajar');
+
   var person2 = Person();
   print(person2);
 
@@ -44,4 +54,6 @@ void main(){
   computer1.startup();
   print(computer1.getOperatingSystem());
   computer1.shutdown();
+
+
 }

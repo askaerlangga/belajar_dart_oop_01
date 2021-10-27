@@ -6,6 +6,15 @@ class Person{
   String? alamat;
   //negara = bersifat final, tidak bisa diubah
   final String negara = "Indonesia";
+
+  //Method = Function yang ada di dalam Class
+  void sayHello(String paramName){
+    print("Halo $paramName, Nama saya $nama");
+  }
+
+  void hello(){
+    print("Halo nama saya $nama");
+  }
 }
 
 void main(){
@@ -16,6 +25,10 @@ void main(){
   print(person1.nama);
   print(person1.alamat);
   print(person1.negara);
+
+  //Memanggil Method
+  person1.hello();
+  person1.sayHello('Edo');
 
   var person2 = Person();
   print(person2);

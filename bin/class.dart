@@ -17,6 +17,13 @@ class Person{
   }
 }
 
+class Computer{
+  //Method Expression Body = Method yang sederhana
+  void startup() => print("Computer is starting");
+  void shutdown() => print("Computer is shutdown");
+  String getOperatingSystem() => 'Ubuntu';
+}
+
 void main(){
   var person1 = Person();
   //Mengubah data Field
@@ -32,4 +39,9 @@ void main(){
 
   var person2 = Person();
   print(person2);
+
+  var computer1 = Computer();
+  computer1.startup();
+  print(computer1.getOperatingSystem());
+  computer1.shutdown();
 }

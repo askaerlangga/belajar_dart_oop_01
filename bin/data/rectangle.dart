@@ -7,7 +7,12 @@ class Rectangle{
   int get width => _width;
 
   //Setter
-  set width(int value) => _width = value;
+  //Validation di Setter
+  set width(int value){
+    if(value >= 1){
+      _width = value;
+    }
+  }
   
   int get length => _length;
 

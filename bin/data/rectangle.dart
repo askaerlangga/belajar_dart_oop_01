@@ -4,20 +4,12 @@ class Rectangle{
 
   //Tidak disarankan menggunakan getter setter jika hanya get dan set data ke field saja
   //Getter
-  int get width{
-    return _width;
-  }
+  int get width => _width;
 
   //Setter
-  set width(int value){
-    _width = value;
-  }
+  set width(int value) => _width = value;
   
-  int get length{
-    return _length;
-  }
+  int get length => _length;
 
-  set length(int value){
-    _length = value;
-  }
+  set length(int value) => _length = value;
 }

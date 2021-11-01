@@ -1,5 +1,6 @@
 //Bisa menjadi Interface
-class Car{
+//Jika membuat interface, buat class dalam bentuk abstract
+abstract class Car{
   String nama = "";
   
   void kendarai(){
@@ -11,9 +12,14 @@ class Car{
   }
 }
 
+abstract class Merek{
+  String merek();
+}
+
 //Interface menggunakan implements
 //Harus dideklarasikan ulang
-class Avanza implements Car{
+//Multiple Interface Inheritance
+class Avanza implements Car, Merek{
   String nama = "Avanza";
 
   void kendarai(){
@@ -23,4 +29,6 @@ class Avanza implements Car{
   int jumlahBan(){
     return 4;
   }
+
+  String merek() => "Toyota";
 }

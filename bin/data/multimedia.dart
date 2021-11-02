@@ -1,21 +1,26 @@
-mixin Playable{
+abstract class Multimedia{
+
+}
+
+//Membatasi Mixin
+mixin Playable on Multimedia{
   String? nama;
   void play(){
     print("Play $nama");
   }
 }
 
-mixin Stoppable{
+mixin Stoppable on Multimedia{
   String? nama;
   void stop(){
     print("Stop $nama");
   }
 }
 
-class Video with Playable, Stoppable{
+class Video extends Multimedia with Playable, Stoppable{
 
 }
 
-class Audio with Playable, Stoppable{
-  
+class Audio extends Multimedia with Playable, Stoppable{
+
 }

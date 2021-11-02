@@ -8,6 +8,11 @@ class Product{
   int? getKuantitas(){
     return _kuantitas;
   }
+
+  //Mengubah method toString()
+  String toString(){
+    return "Product id=$id, nama=$nama, kuantitas=$_kuantitas";
+  }
 }
 
 void main(){

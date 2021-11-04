@@ -8,3 +8,7 @@ class Sum{
     return angka1 + angka2;
   }
 }
+
+//Membuat alias
+typedef Jumlah = Sum;
+typedef Total = Sum;

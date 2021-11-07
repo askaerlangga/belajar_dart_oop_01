@@ -30,8 +30,9 @@ void main(){
 
   try{
     Validation.validate("admin", "hello");
-  } catch (exception) {
-    print("Error : ${exception.toString()}");
+    //Mengetahui letak error
+  } catch (exception, stackTrace) {
+    print("Error : ${exception.toString()}, ${stackTrace.toString()}");
   } finally{
     print("Selesai");
   }

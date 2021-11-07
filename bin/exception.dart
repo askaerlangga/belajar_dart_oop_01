@@ -9,6 +9,8 @@ class Validation{
       throw ValidationException("Username kosong!");
     }else if(password == ""){
       throw ValidationException("Password kosong!");
+    }else if(username != "admin" || password != "admin"){
+      throw Exception("Login Gagal");
     }
 
   }
@@ -17,9 +19,13 @@ class Validation{
 void main(){
   //Try Catch
   try{
-    Validation.validate("", "Hello");
+    Validation.validate("admin", "hello");
   } on ValidationException catch (exception) {
     print("Validation Error : ${exception.message}");
+  } on Exception catch (exception){
+    print("Error : ${exception.toString()}");
   }
+
+  print("Selesai");
   
 }

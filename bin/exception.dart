@@ -18,8 +18,8 @@ void main(){
   //Try Catch
   try{
     Validation.validate("", "Hello");
-  } on ValidationException {
-    print("Validation Error");
+  } on ValidationException catch (exception) {
+    print("Validation Error : ${exception.message}");
   }
   
 }

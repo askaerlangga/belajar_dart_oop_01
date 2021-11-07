@@ -18,13 +18,22 @@ class Validation{
 
 void main(){
   //Try Catch
+  // try{
+  //   Validation.validate("admin", "hello");
+  // } on ValidationException catch (exception) {
+  //   print("Validation Error : ${exception.message}");
+  // } on Exception catch (exception){
+  //   print("Error : ${exception.toString()}");
+  // } finally{
+  //   print("Selesai");
+  // }
+
   try{
     Validation.validate("admin", "hello");
-  } on ValidationException catch (exception) {
-    print("Validation Error : ${exception.message}");
-  } on Exception catch (exception){
+  } catch (exception) {
     print("Error : ${exception.toString()}");
   } finally{
     print("Selesai");
   }
+
 }

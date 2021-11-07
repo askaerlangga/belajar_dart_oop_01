@@ -15,5 +15,11 @@ class Validation{
 }
 
 void main(){
-  Validation.validate("", "Hello");
+  //Try Catch
+  try{
+    Validation.validate("", "Hello");
+  } on ValidationException {
+    print("Validation Error");
+  }
+  
 }
